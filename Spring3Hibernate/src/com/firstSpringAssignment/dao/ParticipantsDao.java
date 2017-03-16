@@ -11,7 +11,7 @@ import com.firstSpringAssignment.model.Participants;
 @Repository("participantsDao")
 public class ParticipantsDao {
    
-    //@Autowired
+        @Autowired
 	private SessionFactory sessionFactory;
     
 		
