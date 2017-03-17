@@ -5,7 +5,7 @@ import java.sql.Date;
 
 public class ParticipantsBean {
 
-	private BigDecimal id;
+	private Long id;
 	private String first_name;
 	private String last_name;
 	private String email_id;
@@ -19,10 +19,10 @@ public class ParticipantsBean {
 		
 	}
 	
-	public BigDecimal getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(BigDecimal id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getFirst_name() {

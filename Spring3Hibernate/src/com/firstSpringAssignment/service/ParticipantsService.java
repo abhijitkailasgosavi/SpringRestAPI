@@ -1,6 +1,5 @@
 package com.firstSpringAssignment.service;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +36,11 @@ public class ParticipantsService {
     
     public void deleteParticipants(Participants participants) {
 		participantsDao.deleteParticipants(participants);
+	}
+    
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+    public void editParticipants(Participants participants) {
+    	System.out.println("in editparticipants service");
+		participantsDao.editParticipants(participants);
 	}
 }
