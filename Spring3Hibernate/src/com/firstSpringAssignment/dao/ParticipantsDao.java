@@ -31,18 +31,20 @@ public class ParticipantsDao {
 	
 	public void addParticipants(Participants participant) {
 		System.out.println("in addparticipants dao");
-		sessionFactory.getCurrentSession().saveOrUpdate(participant);
+		sessionFactory.getCurrentSession().save(participant);
+	}
+	
+	public Participants editParticipants(Participants participant) {
+		System.out.println("in editparticipants dao");
+		sessionFactory.getCurrentSession().update(participant);
+		
+		return getparticipants(participant.getID());
 	}
 	
 	public void deleteParticipants(Participants participants) {
 		System.out.println("in deleteparticipants dao");
-		sessionFactory.getCurrentSession().createQuery("DELETE FROM Participants WHERE id = "+participants.getId()).executeUpdate();
+		sessionFactory.getCurrentSession().createQuery("DELETE FROM Participants WHERE id = "+participants.getID()).executeUpdate();
 		
 	}	
-	
-	public void editParticipants(Participants participant) {
-		System.out.println("in editparticipants dao");
-		sessionFactory.getCurrentSession().update(participant);
-	}
 	
 }

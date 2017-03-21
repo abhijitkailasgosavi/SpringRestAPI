@@ -1,51 +1,21 @@
-package com.firstSpringAssignment.model;
+package com.firstSpringAssignment.bean;
 
 import java.math.BigDecimal;
 import java.sql.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+public class ParticipantsDetails {
 
-
-@Entity
-@Table(name="participants")
-public class Participants {
-
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "ID")
-	private long ID;
-	
-	@NotNull
+    private long ID;
 	private String FIRST_NAME;
-	
-	@NotNull
 	private String LAST_NAME;
-	
-	@NotNull
 	private String EMAIL_ID;
-	
-	@NotNull
 	private BigDecimal PHONE_NO;
-	
-	@NotNull
 	private Date BIRTH_DATE;
-	
-	@NotNull
 	private String GENDER;
-	
-	@NotNull
 	private long SITE_ID;
-	
-	@NotNull
 	private String ADDRESS;
 	
-	public Participants(){
+	public ParticipantsDetails(){
 		
 	}
 
@@ -53,8 +23,8 @@ public class Participants {
 		return ID;
 	}
 
-	public void setID(long bigDecimal) {
-		ID = bigDecimal;
+	public void setID(long iD) {
+		ID = iD;
 	}
 
 	public String getFIRST_NAME() {
@@ -123,9 +93,9 @@ public class Participants {
 
 	@Override
 	public String toString() {
-		return "Participants [ID=" + ID + ", FIRST_NAME=" + FIRST_NAME + ", LAST_NAME=" + LAST_NAME + ", EMAIL_ID="
-				+ EMAIL_ID + ", PHONE_NO=" + PHONE_NO + ", BIRTH_DATE=" + BIRTH_DATE + ", GENDER=" + GENDER
-				+ ", SITE_ID=" + SITE_ID + ", ADDRESS=" + ADDRESS + "]";
+		return "ParticipantsDetails [ID=" + ID + ", FIRST_NAME=" + FIRST_NAME + ", LAST_NAME=" + LAST_NAME
+				+ ", EMAIL_ID=" + EMAIL_ID + ", PHONE_NO=" + PHONE_NO + ", BIRTH_DATE=" + BIRTH_DATE + ", GENDER="
+				+ GENDER + ", SITE_ID=" + SITE_ID + ", ADDRESS=" + ADDRESS + "]";
 	}
 		
 }
