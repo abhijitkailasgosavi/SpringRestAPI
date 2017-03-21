@@ -11,15 +11,15 @@ public class ParticipantsFactory {
 	public Participants prepareModel(ParticipantsDetails participantsDetails){
 		Participants participants = new Participants();
 		
-		participants.setID(participantsDetails.getID());
-		participants.setFIRST_NAME(participantsDetails.getFIRST_NAME());
-		participants.setLAST_NAME(participantsDetails.getLAST_NAME());
-		participants.setEMAIL_ID(participantsDetails.getEMAIL_ID());
-		participants.setPHONE_NO(participantsDetails.getPHONE_NO());
-		participants.setBIRTH_DATE(participantsDetails.getBIRTH_DATE());
-		participants.setGENDER(participantsDetails.getGENDER());
-		participants.setSITE_ID(participantsDetails.getSITE_ID());
-		participants.setADDRESS(participantsDetails.getADDRESS());
+		participants.setId(participantsDetails.getId());
+		participants.setFirst_name(participantsDetails.getFirst_name());
+		participants.setLast_name(participantsDetails.getLast_name());
+		participants.setEmail_id(participantsDetails.getEmail_id());
+		participants.setPhone_no(participantsDetails.getPhone_no());
+		participants.setBirth_date(participantsDetails.getBirth_date());
+		participants.setGender(participantsDetails.getGender());
+		participants.setSite_id(participantsDetails.getSite_id());
+		participants.setAddress(participantsDetails.getAddress());
 		
 		return participants;
 	}
@@ -27,15 +27,15 @@ public class ParticipantsFactory {
 	public ParticipantsDetails prepareParticipantsDetails(Participants participnats){
 		ParticipantsDetails participantsdetails = new ParticipantsDetails();
 		
-	    participantsdetails.setID(participnats.getID());
-		participantsdetails.setFIRST_NAME(participnats.getFIRST_NAME());
-		participantsdetails.setFIRST_NAME(participnats.getLAST_NAME());
-		participantsdetails.setEMAIL_ID(participnats.getEMAIL_ID());
-		participantsdetails.setPHONE_NO(participnats.getPHONE_NO());
-		participantsdetails.setBIRTH_DATE(participnats.getBIRTH_DATE());
-		participantsdetails.setGENDER(participnats.getGENDER());
-		participantsdetails.setSITE_ID(participnats.getSITE_ID());
-		participantsdetails.setADDRESS(participnats.getADDRESS());
+	    participantsdetails.setId(participnats.getId());
+		participantsdetails.setFirst_name(participnats.getFirst_name());
+		participantsdetails.setFirst_name(participnats.getLast_name());
+		participantsdetails.setEmail_id(participnats.getEmail_id());
+		participantsdetails.setPhone_no(participnats.getPhone_no());
+		participantsdetails.setBirth_date(participnats.getBirth_date());
+		participantsdetails.setGender(participnats.getGender());
+		participantsdetails.setSite_id(participnats.getSite_id());
+		participantsdetails.setAddress(participnats.getAddress());
 		
 		return  participantsdetails;
 	}

@@ -19,113 +19,124 @@ public class Participants {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "ID")
-	private long ID;
+	private long id;
+	
+	@Column(name = "FIRST_NAME")
+	private String first_name;
 	
 	@NotNull
-	private String FIRST_NAME;
+	@Column(name = "LAST_NAME")
+	private String last_name;
 	
 	@NotNull
-	private String LAST_NAME;
+	@Column(name = "EMAIL_ID")
+	private String email_id;
 	
 	@NotNull
-	private String EMAIL_ID;
+	@Column(name = "PHONE_NO")
+	private BigDecimal phone_no;
 	
 	@NotNull
-	private BigDecimal PHONE_NO;
+	@Column(name = "BIRTH_DATE")
+	private Date birth_date;
 	
 	@NotNull
-	private Date BIRTH_DATE;
+	@Column(name = "GENDER")
+	private String gender;
 	
 	@NotNull
-	private String GENDER;
+	@Column(name = "SITE_ID")
+	private long site_id;
 	
 	@NotNull
-	private long SITE_ID;
-	
-	@NotNull
-	private String ADDRESS;
+	@Column(name = "ADDRESS")
+	private String address;
 	
 	public Participants(){
 		
 	}
 
-	public long getID() {
-		return ID;
+	
+	public long getId() {
+		return id;
 	}
 
-	public void setID(long bigDecimal) {
-		ID = bigDecimal;
+	public void setId(long id) {
+		this.id = id;
 	}
 
-	public String getFIRST_NAME() {
-		return FIRST_NAME;
+	public String getFirst_name() {
+		return first_name;
 	}
 
-	public void setFIRST_NAME(String fIRST_NAME) {
-		FIRST_NAME = fIRST_NAME;
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
 	}
 
-	public String getLAST_NAME() {
-		return LAST_NAME;
+	public String getLast_name() {
+		return last_name;
 	}
 
-	public void setLAST_NAME(String lAST_NAME) {
-		LAST_NAME = lAST_NAME;
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
 	}
 
-	public String getEMAIL_ID() {
-		return EMAIL_ID;
+	public String getEmail_id() {
+		return email_id;
 	}
 
-	public void setEMAIL_ID(String eMAIL_ID) {
-		EMAIL_ID = eMAIL_ID;
+	public void setEmail_id(String email_id) {
+		this.email_id = email_id;
 	}
 
-	public BigDecimal getPHONE_NO() {
-		return PHONE_NO;
+	public BigDecimal getPhone_no() {
+		return phone_no;
 	}
 
-	public void setPHONE_NO(BigDecimal pHONE_NO) {
-		PHONE_NO = pHONE_NO;
+	public void setPhone_no(BigDecimal phone_no) {
+		this.phone_no = phone_no;
 	}
 
-	public Date getBIRTH_DATE() {
-		return BIRTH_DATE;
+	public Date getBirth_date() {
+		return birth_date;
 	}
 
-	public void setBIRTH_DATE(Date bIRTH_DATE) {
-		BIRTH_DATE = bIRTH_DATE;
+	public void setBirth_date(Date birth_date) {
+		this.birth_date = birth_date;
 	}
 
-	public String getGENDER() {
-		return GENDER;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setGENDER(String gENDER) {
-		GENDER = gENDER;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
-	public long getSITE_ID() {
-		return SITE_ID;
+	public long getSite_id() {
+		return site_id;
 	}
 
-	public void setSITE_ID(long sITE_ID) {
-		SITE_ID = sITE_ID;
+	public void setSite_id(long site_id) {
+		this.site_id = site_id;
 	}
 
-	public String getADDRESS() {
-		return ADDRESS;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setADDRESS(String aDDRESS) {
-		ADDRESS = aDDRESS;
+	public void setAddress(String address) {
+		this.address = address;
 	}
+
 
 	@Override
 	public String toString() {
-		return "Participants [ID=" + ID + ", FIRST_NAME=" + FIRST_NAME + ", LAST_NAME=" + LAST_NAME + ", EMAIL_ID="
-				+ EMAIL_ID + ", PHONE_NO=" + PHONE_NO + ", BIRTH_DATE=" + BIRTH_DATE + ", GENDER=" + GENDER
-				+ ", SITE_ID=" + SITE_ID + ", ADDRESS=" + ADDRESS + "]";
+		return "Participants [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", email_id="
+				+ email_id + ", phone_no=" + phone_no + ", birth_date=" + birth_date + ", gender=" + gender
+				+ ", site_id=" + site_id + ", address=" + address + "]";
 	}
-		
+
+	
+	
 }
