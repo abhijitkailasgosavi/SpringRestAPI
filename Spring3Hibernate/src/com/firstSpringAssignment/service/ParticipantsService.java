@@ -23,27 +23,27 @@ public class ParticipantsService {
 		return participantsDao.listparticipants();
 	}
 	
-    public Participants getParticipants(Long id) {
+        public Participants getParticipants(Long id) {
 		
 		return participantsDao.getparticipants(id);
 	}
 
-    public ParticipantsDetails addParticipants(ParticipantsDetails participantsDetails) {
-    	Participants participants = participantsFactory.prepareModel(participantsDetails);
+        public ParticipantsDetails addParticipants(ParticipantsDetails participantsDetails) {
+    		Participants participants = participantsFactory.prepareModel(participantsDetails);
 		Participants newParticipants = participantsDao.addParticipants(participants);
 		
 		return participantsFactory.prepareParticipantsDetails(newParticipants);
 	}
     
-    public ParticipantsDetails editParticipants(ParticipantsDetails participantsDetails) {
-    	Participants participants = participantsFactory.prepareModel(participantsDetails);
-    	Participants newParticipants = participantsDao.editParticipants(participants);
+        public ParticipantsDetails editParticipants(ParticipantsDetails participantsDetails) {
+    		Participants participants = participantsFactory.prepareModel(participantsDetails);
+    		Participants newParticipants = participantsDao.editParticipants(participants);
     	
-    	return participantsFactory.prepareParticipantsDetails(newParticipants);
+    		return participantsFactory.prepareParticipantsDetails(newParticipants);
 	}
     
-    public ParticipantsDetails deleteParticipants(long id) {
-    	Participants participants = getParticipants(id);
+        public ParticipantsDetails deleteParticipants(long id) {
+    		Participants participants = getParticipants(id);
 		participantsDao.deleteParticipants(participants);
 		
 		return participantsFactory.prepareParticipantsDetails(participants);
