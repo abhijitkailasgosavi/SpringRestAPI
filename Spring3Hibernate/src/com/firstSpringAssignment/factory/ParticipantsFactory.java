@@ -12,13 +12,13 @@ public class ParticipantsFactory {
 		Participants participants = new Participants();
 		
 		participants.setId(participantsDetails.getId());
-		participants.setFirst_name(participantsDetails.getFirst_name());
-		participants.setLast_name(participantsDetails.getLast_name());
-		participants.setEmail_id(participantsDetails.getEmail_id());
-		participants.setPhone_no(participantsDetails.getPhone_no());
-		participants.setBirth_date(participantsDetails.getBirth_date());
+		participants.setFirstName(participantsDetails.getFirstName());
+		participants.setLastName(participantsDetails.getLastName());
+		participants.setEmailId(participantsDetails.getEmailId());
+		participants.setPhoneNo(participantsDetails.getPhoneNo());
+		participants.setBirthDate(participantsDetails.getBirthDate());
 		participants.setGender(participantsDetails.getGender());
-		participants.setSite_id(participantsDetails.getSite_id());
+		participants.setSiteId(participantsDetails.getSiteId());
 		participants.setAddress(participantsDetails.getAddress());
 		
 		return participants;
@@ -28,13 +28,13 @@ public class ParticipantsFactory {
 		ParticipantsDetails participantsdetails = new ParticipantsDetails();
 		
 	    participantsdetails.setId(participnats.getId());
-		participantsdetails.setFirst_name(participnats.getFirst_name());
-		participantsdetails.setFirst_name(participnats.getLast_name());
-		participantsdetails.setEmail_id(participnats.getEmail_id());
-		participantsdetails.setPhone_no(participnats.getPhone_no());
-		participantsdetails.setBirth_date(participnats.getBirth_date());
+		participantsdetails.setFirstName(participnats.getFirstName());
+		participantsdetails.setLastName(participnats.getLastName());
+		participantsdetails.setEmailId(participnats.getEmailId());
+		participantsdetails.setPhoneNo(participnats.getPhoneNo());
+		participantsdetails.setBirthDate(participnats.getBirthDate());
 		participantsdetails.setGender(participnats.getGender());
-		participantsdetails.setSite_id(participnats.getSite_id());
+		participantsdetails.setSiteId(participnats.getId());
 		participantsdetails.setAddress(participnats.getAddress());
 		
 		return  participantsdetails;

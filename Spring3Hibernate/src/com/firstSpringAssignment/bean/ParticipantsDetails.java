@@ -7,26 +7,23 @@ public class ParticipantsDetails {
 
     private long id;
     
-	private String first_name;
+	private String firstName;
 	
-	private String last_name;
+	private String lastName;
 	
-	private String email_id;
+	private String emailId;
 	
-	private BigDecimal phone_no;
+	private BigDecimal phoneNo;
 	
-	private Date birth_date;
+	private Date birthDate;
 	
 	private String gender;
 	
-	private long site_id;
+	private long siteId;
 	
 	private String address;
 	
-	public ParticipantsDetails(){
-		
-	}
-
+	
 	public long getId() {
 		return id;
 	}
@@ -35,44 +32,44 @@ public class ParticipantsDetails {
 		this.id = id;
 	}
 
-	public String getFirst_name() {
-		return first_name;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getLast_name() {
-		return last_name;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLast_name(String last_name) {
-		this.last_name = last_name;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
-	public String getEmail_id() {
-		return email_id;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setEmail_id(String email_id) {
-		this.email_id = email_id;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
-	public BigDecimal getPhone_no() {
-		return phone_no;
+	public BigDecimal getPhoneNo() {
+		return phoneNo;
 	}
 
-	public void setPhone_no(BigDecimal phone_no) {
-		this.phone_no = phone_no;
+	public void setPhoneNo(BigDecimal phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 
-	public Date getBirth_date() {
-		return birth_date;
+	public Date getBirthDate() {
+		return birthDate;
 	}
 
-	public void setBirth_date(Date birth_date) {
-		this.birth_date = birth_date;
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
 	}
 
 	public String getGender() {
@@ -83,12 +80,12 @@ public class ParticipantsDetails {
 		this.gender = gender;
 	}
 
-	public long getSite_id() {
-		return site_id;
+	public long getSiteId() {
+		return siteId;
 	}
 
-	public void setSite_id(long site_id) {
-		this.site_id = site_id;
+	public void setSiteId(long siteId) {
+		this.siteId = siteId;
 	}
 
 	public String getAddress() {
@@ -101,9 +98,9 @@ public class ParticipantsDetails {
 
 	@Override
 	public String toString() {
-		return "ParticipantsDetails [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name
-				+ ", email_id=" + email_id + ", phone_no=" + phone_no + ", birth_date=" + birth_date + ", gender="
-				+ gender + ", site_id=" + site_id + ", address=" + address + "]";
+		return "ParticipantsDetails [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName +
+			   ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", birthDate=" + birthDate + ", " +
+			   "gender=" + gender + ", siteId=" + siteId + ", address=" + address + "]";
 	}
 
 	

@@ -24,44 +24,36 @@ public class ParticipantsController {
 		
 	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody List<Participants> getListParicipants() {
-		
 	    List<Participants> list = participantsSvc.getListParticipants();
-		
-	    for(Participants part:list) {
-			System.out.println("Particiapnts is " + part);
-	    }
-	    
+		   
 	    return list;
 	}
 	
-	@RequestMapping(method = RequestMethod.GET,value="/{id}")
+	@RequestMapping(method = RequestMethod.GET, value="/{id}")
 	public @ResponseBody Participants getParicipant(@PathVariable Long id) {
 		Participants participant = participantsSvc.getParticipants(id);		
-		System.out.println(participant);
 		
 		return participant;
 	}
 	
 	@RequestMapping(method = RequestMethod.POST )
 	public @ResponseBody ParticipantsDetails addParticipants(@RequestBody ParticipantsDetails participantsDetails) {
-		System.out.println("in addparticipants controller");
-	    
+		
 		return  participantsSvc.addParticipants(participantsDetails);	    
 	}
 	
-	@RequestMapping(method = RequestMethod.PUT)
-	public @ResponseBody ParticipantsDetails editParicipants(@RequestBody ParticipantsDetails participantsDetails) {
-		System.out.println("in editparticipants controller");
+	@RequestMapping(method = RequestMethod.PUT, value="/{id}")
+	public @ResponseBody ParticipantsDetails editParicipants(@RequestBody ParticipantsDetails participantsDetails,
+		   @PathVariable Long id) {
+		participantsDetails.setId(id);
 	
 		return participantsSvc.editParticipants(participantsDetails);	    
 	}
 	
-	@RequestMapping( method = RequestMethod.DELETE,value = "/{id}")
-	public @ResponseBody String deleteParticipants(@PathVariable Long id) {
-		participantsSvc.deleteParticipants(id);
-		System.out.println("participants deleted"+ id);
+	@RequestMapping( method = RequestMethod.DELETE, value = "/{id}")
+	public @ResponseBody ParticipantsDetails deleteParticipants(@PathVariable Long id) {
 		
-		return "index";
+		return participantsSvc.deleteParticipants(id);
 	}
 		
 }
