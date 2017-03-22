@@ -24,9 +24,9 @@ public class ParticipantsController {
 		
 	@RequestMapping(method = RequestMethod.GET)
 	public @ResponseBody List<Participants> getListParicipants() {
-	    List<Participants> list = participantsSvc.getListParticipants();
+	        List<Participants> list = participantsSvc.getListParticipants();
 		   
-	    return list;
+	        return list;
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="/{id}")
