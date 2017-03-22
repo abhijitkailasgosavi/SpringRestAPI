@@ -15,7 +15,7 @@ import com.firstSpringAssignment.model.Participants;
 import com.firstSpringAssignment.service.ParticipantsService;
 
 @Controller
-@RequestMapping("/Participants")
+@RequestMapping("/participants")
 public class ParticipantsController {
 	
 	@Autowired
