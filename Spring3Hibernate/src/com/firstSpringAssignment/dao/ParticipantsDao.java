@@ -11,7 +11,7 @@ import com.firstSpringAssignment.model.Participants;
 @Repository("participantsDao")
 public class ParticipantsDao {
    
-    @Autowired
+        @Autowired
 	private SessionFactory sessionFactory;
     
 		
@@ -42,8 +42,7 @@ public class ParticipantsDao {
 	}
 	
 	public void deleteParticipants(Participants participants) {
-		sessionFactory.getCurrentSession().createQuery("DELETE FROM Participants WHERE id = "+participants.getId()).executeUpdate();
-		
+		sessionFactory.getCurrentSession().createQuery("DELETE FROM Participants WHERE id = "+participants.getId()).executeUpdate();	
 	}	
 	
 }
