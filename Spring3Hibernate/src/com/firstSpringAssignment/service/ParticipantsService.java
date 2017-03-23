@@ -1,52 +1,20 @@
 package com.firstSpringAssignment.service;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.firstSpringAssignment.bean.ParticipantsDetails;
-import com.firstSpringAssignment.dao.ParticipantsDao;
-import com.firstSpringAssignment.factory.ParticipantsFactory;
 import com.firstSpringAssignment.model.Participants;
 
-@Service("participantsService")
-public class ParticipantsService {
-    
-	@Autowired
-	private ParticipantsDao participantsDao;
-	
-	@Autowired
-	private ParticipantsFactory participantsFactory;
-	
-	public List<Participants> getListParticipants() {
-		
-		return participantsDao.listparticipants();
-	}
-	
-    public Participants getParticipants(Long id) {
-		
-		return participantsDao.getparticipants(id);
-	}
+public interface ParticipantsService {
 
-    public ParticipantsDetails addParticipants(ParticipantsDetails participantsDetails) {
-    	Participants participants = participantsFactory.prepareModel(participantsDetails);
-		Participants newParticipants = participantsDao.addParticipants(participants);
-		
-		return participantsFactory.prepareParticipantsDetails(newParticipants);
-	}
-    
-    public ParticipantsDetails editParticipants(ParticipantsDetails participantsDetails) {
-    	Participants participants = participantsFactory.prepareModel(participantsDetails);
-    	Participants newParticipants = participantsDao.editParticipants(participants);
-    	
-    	return participantsFactory.prepareParticipantsDetails(newParticipants);
-	}
-    
-    public ParticipantsDetails deleteParticipants(long id) {
-    	Participants participants = getParticipants(id);
-		participantsDao.deleteParticipants(participants);
-		
-		return participantsFactory.prepareParticipantsDetails(participants);
-	}
-    
+	List<Participants> getListParticipants();
+
+	Participants getParticipants(Long id);
+
+	ParticipantsDetails addParticipants(ParticipantsDetails participantsDetails);
+
+	ParticipantsDetails editParticipants(ParticipantsDetails participantsDetails);
+
+	ParticipantsDetails deleteParticipants(long id);
+
 }
