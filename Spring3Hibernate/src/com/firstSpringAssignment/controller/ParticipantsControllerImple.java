@@ -16,49 +16,43 @@ import com.firstSpringAssignment.service.ParticipantsService;
 
 @Controller
 @RequestMapping("/participants")
-public class ParticipantsControllerImple implements ParticipantsController {
+public class ParticipantsControllerImple {
 	
 	@Autowired
 	private ParticipantsService participantsSvc;
 	
-		
-	@Override
 	@RequestMapping(method = RequestMethod.GET)
-	public @ResponseBody List<Participants> getListParicipants() {
-	    List<Participants> list = participantsSvc.getListParticipants();
+	public @ResponseBody List<Participants> getParicipants() {
+	    	List<Participants> list = participantsSvc.getParticipants();
 		   
-	    return list;
+	   	return list;
 	}
 	
-	@Override
 	@RequestMapping(method = RequestMethod.GET, value="/{id}")
 	public @ResponseBody Participants getParicipant(@PathVariable Long id) {
-		Participants participant = participantsSvc.getParticipants(id);		
+		Participants participant = participantsSvc.getParticipant(id);		
 		
 		return participant;
 	}
 	
-	@Override
 	@RequestMapping(method = RequestMethod.POST )
-	public @ResponseBody ParticipantsDetails addParticipants(@RequestBody ParticipantsDetails participantsDetails) {
+	public @ResponseBody ParticipantsDetails addParticipant(@RequestBody ParticipantsDetails participantsDetails) {
 		
-		return  participantsSvc.addParticipants(participantsDetails);	    
+		return  participantsSvc.addParticipant(participantsDetails);	    
 	}
 	
-	@Override
 	@RequestMapping(method = RequestMethod.PUT, value="/{id}")
-	public @ResponseBody ParticipantsDetails editParicipants(@RequestBody ParticipantsDetails participantsDetails,
-	        @PathVariable Long id) {
+	public @ResponseBody ParticipantsDetails updateParicipant(@RequestBody ParticipantsDetails participantsDetails,
+		   @PathVariable Long id) {
 		participantsDetails.setId(id);
 	
-		return participantsSvc.editParticipants(participantsDetails);	    
+		return participantsSvc.updateParticipant(participantsDetails);	    
 	}
 	
-	@Override
 	@RequestMapping( method = RequestMethod.DELETE, value = "/{id}")
-	public @ResponseBody ParticipantsDetails deleteParticipants(@PathVariable Long id) {
+	public @ResponseBody ParticipantsDetails deleteParticipant(@PathVariable Long id) {
 		
-		return participantsSvc.deleteParticipants(id);
+		return participantsSvc.deleteParticipant(id);
 	}
 		
 }

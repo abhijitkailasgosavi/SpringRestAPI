@@ -1,6 +1,5 @@
 package com.firstSpringAssignment.model;
 
-import java.math.BigDecimal;
 import java.sql.Date;
 
 import javax.persistence.Column;
@@ -19,7 +18,7 @@ public class Participants {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "IDENTIFIER")
-	private long id;
+	private Long id;
 	
 	@Column(name = "FIRST_NAME")
 	private String firstName;
@@ -34,7 +33,7 @@ public class Participants {
 	
 	@NotNull
 	@Column(name = "PHONE_NO")
-	private BigDecimal phoneNo;
+	private String phoneNo;
 	
 	@NotNull
 	@Column(name = "BIRTH_DATE")
@@ -46,17 +45,17 @@ public class Participants {
 	
 	@NotNull
 	@Column(name = "SITE_ID")
-	private long siteId;
+	private Long siteId;
 	
 	@NotNull
 	@Column(name = "ADDRESS")
 	private String address;
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -84,11 +83,11 @@ public class Participants {
 		this.emailId = emailId;
 	}
 
-	public BigDecimal getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(BigDecimal phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 
@@ -108,11 +107,11 @@ public class Participants {
 		this.gender = gender;
 	}
 
-	public long getSiteId() {
+	public Long getSiteId() {
 		return siteId;
 	}
 
-	public void setSiteId(long siteId) {
+	public void setSiteId(Long siteId) {
 		this.siteId = siteId;
 	}
 
@@ -127,8 +126,8 @@ public class Participants {
 	@Override
 	public String toString() {
 		return "Participants [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", emailId=" +
-	                emailId + ", phoneNo=" + phoneNo + ", birthDate=" + birthDate + ", gender=" + gender +
-                        ", siteId=" + siteId + ", address=" + address + "]";
+	            emailId + ", phoneNo=" + phoneNo + ", birthDate=" + birthDate + ", gender=" + gender + ", siteId=" +
+				siteId + ", address=" + address + "]";
 	}
 	
 		

@@ -6,14 +6,14 @@ import com.firstSpringAssignment.model.Participants;
 
 public interface ParticipantsDao {
 
-	List<Participants> listparticipants();
+	List<Participants> getParticipants();
 
-	Participants getparticipants(long id);
+	Participants getParticipant(long id);
 
-	Participants addParticipants(Participants participant);
+	Participants addParticipant(Participants participant);
 
-	Participants editParticipants(Participants participant);
+	Participants updateParticipant(Participants participant);
 
-	void deleteParticipants(Participants participants);
+	void deleteParticipant(Participants participants);
 
 }

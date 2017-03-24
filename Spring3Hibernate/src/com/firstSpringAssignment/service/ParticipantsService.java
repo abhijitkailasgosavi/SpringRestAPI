@@ -7,14 +7,14 @@ import com.firstSpringAssignment.model.Participants;
 
 public interface ParticipantsService {
 
-	List<Participants> getListParticipants();
+	List<Participants> getParticipants();
 
-	Participants getParticipants(Long id);
+	Participants getParticipant(Long id);
 
-	ParticipantsDetails addParticipants(ParticipantsDetails participantsDetails);
+	ParticipantsDetails addParticipant(ParticipantsDetails participantsDetails);
 
-	ParticipantsDetails editParticipants(ParticipantsDetails participantsDetails);
+	ParticipantsDetails updateParticipant(ParticipantsDetails participantsDetails);
 
-	ParticipantsDetails deleteParticipants(long id);
+	ParticipantsDetails deleteParticipant(long id);
 
 }

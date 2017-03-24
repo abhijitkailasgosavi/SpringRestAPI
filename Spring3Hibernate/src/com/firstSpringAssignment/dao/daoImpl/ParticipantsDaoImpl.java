@@ -1,4 +1,4 @@
-package com.firstSpringAssignment.dao;
+package com.firstSpringAssignment.dao.daoImpl;
 
 
 import java.util.List;
@@ -6,50 +6,50 @@ import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.firstSpringAssignment.dao.ParticipantsDao;
 import com.firstSpringAssignment.model.Participants;
 
-
+@Transactional
 @Repository("participantsDao")
 public class ParticipantsDaoImpl implements ParticipantsDao {
-   
-        @Autowired
+
+	@Autowired
 	private SessionFactory sessionFactory;
-    
-		
+
 	public ParticipantsDaoImpl(){
 		System.out.println("Successfully loaded participants dao");
 	}
-	
+
 	@Override
 	@SuppressWarnings("unchecked")
-	public List<Participants> listparticipants() {
+	public List<Participants> getParticipants() {
 		return (List<Participants>) sessionFactory.getCurrentSession().createCriteria(Participants.class).list();
 	}
-	
+
 	@Override
-	public Participants getparticipants(long id) {
+	public Participants getParticipant(long id) {
 		return (Participants) sessionFactory.getCurrentSession().get(Participants.class, id);
 	}
 
 	@Override
-	public Participants addParticipants(Participants participant) {
+	public Participants addParticipant(Participants participant) {
 		long id = (Long) sessionFactory.getCurrentSession().save(participant);
-	
-		return getparticipants(id);
+
+		return getParticipant(id);
 	}
-	
+
 	@Override
-	public Participants editParticipants(Participants participant) {
+	public Participants updateParticipant(Participants participant) {
 		sessionFactory.getCurrentSession().update(participant);
-		
-		return getparticipants(participant.getId());
+
+		return getParticipant(participant.getId());
 	}
-	
+
 	@Override
-	public void deleteParticipants(Participants participants) {
-		sessionFactory.getCurrentSession().createQuery("DELETE FROM Participants WHERE id = "+participants.getId()).executeUpdate();
-		
+	public void deleteParticipant(Participants participant) {
+		sessionFactory.getCurrentSession().delete(participant);
 	}	
-	
+
 }

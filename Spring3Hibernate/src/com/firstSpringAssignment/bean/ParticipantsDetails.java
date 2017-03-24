@@ -1,11 +1,10 @@
 package com.firstSpringAssignment.bean;
 
-import java.math.BigDecimal;
 import java.sql.Date;
 
 public class ParticipantsDetails {
 
-        private long id;
+	private Long id;
     
 	private String firstName;
 	
@@ -13,22 +12,22 @@ public class ParticipantsDetails {
 	
 	private String emailId;
 	
-	private BigDecimal phoneNo;
+	private String phoneNo;
 	
 	private Date birthDate;
 	
 	private String gender;
 	
-	private long siteId;
+	private Long siteId;
 	
 	private String address;
 	
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -56,11 +55,11 @@ public class ParticipantsDetails {
 		this.emailId = emailId;
 	}
 
-	public BigDecimal getPhoneNo() {
+	public String getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(BigDecimal phoneNo) {
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
 
@@ -80,11 +79,11 @@ public class ParticipantsDetails {
 		this.gender = gender;
 	}
 
-	public long getSiteId() {
+	public Long getSiteId() {
 		return siteId;
 	}
 
-	public void setSiteId(long siteId) {
+	public void setSiteId(Long siteId) {
 		this.siteId = siteId;
 	}
 
@@ -99,8 +98,8 @@ public class ParticipantsDetails {
 	@Override
 	public String toString() {
 		return "ParticipantsDetails [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName +
-		       ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", birthDate=" + birthDate + ", " +
-		       "gender=" + gender + ", siteId=" + siteId + ", address=" + address + "]";
+			   ", emailId=" + emailId + ", phoneNo=" + phoneNo + ", birthDate=" + birthDate + ", " +
+			   "gender=" + gender + ", siteId=" + siteId + ", address=" + address + "]";
 	}
 
 	
